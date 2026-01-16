@@ -8,7 +8,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Funcoes.Func();
+            Enquanto.While();
+            //Funcoes.Func();
         }
         static void test(string[] args)
         {
