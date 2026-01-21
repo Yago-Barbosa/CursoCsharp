@@ -8,9 +8,9 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Atv4.Exercicio();
+            //Atv4.Exercicio();
             //Atv3.Exercicio();
-            //Poo.Pratica();
+            Poo.Pratica();
             //Enquanto.For();
             //Funcoes.Func();
         }
