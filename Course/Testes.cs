@@ -8,7 +8,9 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AtvProduto.Exercicio();
+            AtvAluno.Exercicio();
+            //AtvFuncionario.Exercicio();
+            //AtvRetangulo.Exercicio();
             //Atv4.Exercicio();
             //Atv3.Exercicio();
             //Poo.Pratica();
