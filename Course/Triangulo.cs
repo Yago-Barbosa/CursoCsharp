@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Course
+﻿namespace Course
 {
     class Triangulo
     {
