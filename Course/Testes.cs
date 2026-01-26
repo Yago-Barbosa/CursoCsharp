@@ -8,7 +8,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            MembrosEstaticos.Estatico();
+            AtvDolares.Exercicio();
+            //MembrosEstaticos.Estatico();
             //AtvAluno.Exercicio();
             //AtvFuncionario.Exercicio();
             //AtvRetangulo.Exercicio();
