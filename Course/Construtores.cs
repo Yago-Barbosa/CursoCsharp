@@ -16,6 +16,18 @@ namespace Course
 
             Product p = new Product(nome, preco);
 
+            // Possivel com a implementação do construtor Padrao
+            Product p2 = new Product();
+
+            // Sintaxe Alternativa para inicializar Valores,
+            // mesmo sem construtores customizados,
+            // ainda é necessario o Padrão
+            Product p3 = new Product { 
+                Nome = "Tv",
+                Preco = 500.00,
+                Quantidade = 20
+            };
+
             Console.WriteLine();
             Console.WriteLine("Dados do produto: " + p);
             Console.WriteLine();
