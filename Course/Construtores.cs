@@ -8,13 +8,13 @@ namespace Course
         {
             Product p = new Product("TV", 500.00, 10);
 
-            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.Nome);
 
-            p.SetNome("T");
+            p.Nome = "TV 4K";
 
-            Console.WriteLine(p.GetNome());
-            Console.WriteLine(p.GetPreco());
-            Console.WriteLine(p.GetQuantidade());
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco.ToString("F2",CultureInfo.InvariantCulture));
+            Console.WriteLine(p.Quantidade);
 
             // Sem o encapsulamento o programador pode mudar livremente os valores
             //p.Quantidade = -10;

@@ -20,31 +20,43 @@ namespace Course
             _quantidade = quantidade;
         }
 
-        public string GetNome() {
-            return _nome; 
+        public string Nome
+        {
+            get { return _nome; }
+            set {
+                // Repor _nome por value com um valor que atualiza o _nome no set
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
         }
 
-        // é possivel adicionar uma logica para impedir "Valores Inconsistentes"
-        public void SetNome(string nome)
+        public double Preco
         {
-            if (nome != null && nome.Length > 1)
-            {
-                _nome= nome;
-            } 
+            get { return _preco; }
         }
+
+        public int Quantidade
+        {
+            get { return _quantidade; }
+        }
+        //public string GetNome() {
+        //    return _nome; 
+        //}
+
+        // é possivel adicionar uma logica para impedir "Valores Inconsistentes"
+        //public void SetNome(string nome)
+        //{
+        //    if (nome != null && nome.Length > 1)
+        //    {
+        //        _nome= nome;
+        //    } 
+        //}
 
         // Colocando somente o Get Preco e Quantidade eu posso impedir que esses valores sejam alterados,
         // porém eles podem ser "chamados"
 
-        public double GetPreco()
-        {
-            return _preco;
-        }
-
-        public int GetQuantidade()
-        {
-            return _quantidade;
-        }
         // O this permite que o construtor receba o valor de outros construtores, reduzindo o numero de linhas...
         // Tambem pode ser usado para passar o proprio objeto como argumento na chamada de um metodo ou construtor
         //public Product(string nome, double preco) : this() {
