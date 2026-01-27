@@ -4,47 +4,95 @@ namespace Course
     class Product
     {
         // Classe do Produto utilizado em outra aula, mas agora com construtores
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
+        // Por convenção os nomes de atributos privados começam com _ e letra minuscula
 
         // Permite o Construtor padrão sem parametros
-        public Product(){}
+        public Product(){
+        }
+
+        public Product(string nome, double preco, int quantidade)
+        {
+            _nome = nome;
+            _preco = preco;
+            _quantidade = quantidade;
+        }
+
+        public string GetNome() {
+            return _nome; 
+        }
+
+        // é possivel adicionar uma logica para impedir "Valores Inconsistentes"
+        public void SetNome(string nome)
+        {
+            if (nome != null && nome.Length > 1)
+            {
+                _nome= nome;
+            } 
+        }
+
+        // Colocando somente o Get Preco e Quantidade eu posso impedir que esses valores sejam alterados,
+        // porém eles podem ser "chamados"
+
+        public double GetPreco()
+        {
+            return _preco;
+        }
+
+        public int GetQuantidade()
+        {
+            return _quantidade;
+        }
+        // O this permite que o construtor receba o valor de outros construtores, reduzindo o numero de linhas...
+        // Tambem pode ser usado para passar o proprio objeto como argumento na chamada de um metodo ou construtor
+        //public Product(string nome, double preco) : this() {
+        //    Nome = nome;
+        //    Preco = preco;
+        //}
+
+        //// Outro uso para o this...
+        //public Product(string nome, double preco, int quantidade) : this(nome, preco){
+        //    Quantidade = quantidade;
+        //}
+
 
         // Um construtor permite que um valor seja atribuido no inicio da execução
-        public Product(string nome, double preco, int quantidade) {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
-          }
+        //public Product(string nome, double preco, int quantidade)
+        //{
+        //    Nome = nome;
+        //    Preco = preco;
+        //    Quantidade = quantidade;
+        //}
 
         // Exemplo de Sobrecarga...
-        public Product(string nome, double preco)
-        {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = 5; // Essa linha é dispensavel pois o valor padrao já é 0
-        }
+        //public Product(string nome, double preco)
+        //{
+        //    Nome = nome;
+        //    Preco = preco;
+        //    Quantidade = 5; // Essa linha é dispensavel pois o valor padrao já é 0
+        //}
         public double ValorTotalEmEstoque()
         {
-            return Preco * Quantidade;
+            return _preco * _quantidade;
         }
         public void AdicionarProdutos(int quantidade)
         {
-            Quantidade += quantidade;
+            _quantidade += quantidade;
         }
         public void RemoverProdutos(int quantidade)
         {
-            Quantidade -= quantidade;
+            _quantidade -= quantidade;
         }
         // Override é usado para atribuir uma nova função ao ToString
         public override string ToString()
         {
-            return Nome
+            return _nome
             + ", $ "
-            + Preco.ToString("F2", CultureInfo.InvariantCulture)
+            + _preco.ToString("F2", CultureInfo.InvariantCulture)
             + ", "
-            + Quantidade
+            + _quantidade
             + " unidades, Total: $ "
             + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
