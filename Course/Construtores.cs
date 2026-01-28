@@ -10,7 +10,7 @@ namespace Course
 
             Console.WriteLine(p.Nome);
 
-            p.Nome = "TV 4K";
+            p.Nome = "T";
 
             Console.WriteLine(p.Nome);
             Console.WriteLine(p.Preco.ToString("F2",CultureInfo.InvariantCulture));
