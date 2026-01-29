@@ -8,7 +8,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Construtores.Encapsulamento();
+            AtvBanco.Exercicio();
+            //Construtores.Encapsulamento();
             //AtvDolares.Exercicio();
             //MembrosEstaticos.Estatico();
             //AtvAluno.Exercicio();

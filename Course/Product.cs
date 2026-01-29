@@ -1,6 +1,14 @@
 ﻿using System.Globalization;
 namespace Course
 {
+    // Ordem Sugerida para a implementação de membros de uma classe
+    /*
+     * Atributos Privados
+     * Propriedades Autoimplementadas
+     * Construtores
+     * Propriedades Customizadas
+     * Outros Métodos da Classe 
+    */ 
     class Product
     {
         // Classe do Produto utilizado em outra aula, mas agora com construtores
