@@ -7,6 +7,47 @@ namespace Course
 {
     internal class AtvBanco
     {
+        public static void Correcao()
+        {
+            ContaBancariaCorrecao conta;
+            Console.Write("Digite o Número da conta: ");
+            int numero = int.Parse(Console.ReadLine()!);
+            Console.Write("Digite o titular da conta: ");
+            string titular = Console.ReadLine()!;
+            Console.Write("Haverá deposito inicial (s/n)? ");
+            char resp = char.Parse(Console.ReadLine()!);
+
+            if(resp == 's' || resp == 'S')
+            {
+                Console.Write("Digite o Valor do deposito inicial: ");
+                double depositoInicial = double.Parse(Console.ReadLine()! , CultureInfo.InvariantCulture);
+                conta = new ContaBancariaCorrecao(numero, titular, depositoInicial);
+            } else
+            {
+                conta = new ContaBancariaCorrecao(numero, titular);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Dados da conta: ");
+            Console.WriteLine(conta);
+
+            Console.WriteLine();
+            Console.Write("Digite um valor para deposito: ");
+            double quantia = double.Parse(Console.ReadLine()! ,CultureInfo.InvariantCulture);
+            conta.Deposito(quantia);
+            Console.WriteLine("Dados da conta atualizados: ");
+            Console.WriteLine(conta);
+
+            Console.WriteLine();
+            Console.Write("Digite um valor para saque: ");
+            quantia = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
+            conta.Saque(quantia);
+            Console.WriteLine("Dados da conta atualizados: ");
+            Console.WriteLine(conta);
+
+
+        }
+
         public static void Exercicio()
         {
             double valor = 0.0;
