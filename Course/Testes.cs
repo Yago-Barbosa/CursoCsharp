@@ -8,7 +8,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AulaNullables.Aula();
+            AulaVetores.Exemplo1();
+            //AulaNullables.Aula();
             //AulaStruct.Aula();
             //AtvBanco.Correcao();
             //Construtores.Encapsulamento();
