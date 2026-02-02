@@ -8,7 +8,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AtvBanco.Correcao();
+            AulaStruct.Aula();
+            //AtvBanco.Correcao();
             //Construtores.Encapsulamento();
             //AtvDolares.Exercicio();
             //MembrosEstaticos.Estatico();
