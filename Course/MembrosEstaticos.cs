@@ -37,12 +37,12 @@ namespace Course
             Console.Write("Digite o Valor do Raio: ");
             double raio = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
 
-            double circ = Calculadora.Circunferencia(raio);
-            double volume = Calculadora.Volume(raio);
+            double circ = CalculadoraVolume.Circunferencia(raio);
+            double volume = CalculadoraVolume.Volume(raio);
 
             Console.WriteLine("Circunferencia = " + circ.ToString("F2", CultureInfo.InvariantCulture));
             Console.WriteLine("Volume = " + volume.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine("Valor de Pi = " + Calculadora.Pi.ToString("F2", CultureInfo.InvariantCulture));
+            Console.WriteLine("Valor de Pi = " + CalculadoraVolume.Pi.ToString("F2", CultureInfo.InvariantCulture));
         }
     }
 }
