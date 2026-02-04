@@ -8,22 +8,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AulaParams.Out();
-            //AtvVetores.Exercicio();
-            //AulaVetores.Exemplo2();
-            //AulaNullables.Aula();
-            //AulaStruct.Aula();
-            //AtvBanco.Correcao();
-            //Construtores.Encapsulamento();
-            //AtvDolares.Exercicio();
-            //MembrosEstaticos.Estatico();
-            //AtvAluno.Exercicio();
-            //AtvFuncionario.Exercicio();
-            //AtvRetangulo.Exercicio();
-            //Atv4.Exercicio();
-            //Atv3.Exercicio();
-            //Poo.Pratica();
-            //Enquanto.For();
+            AulaForeach.Aula();
             //Funcoes.Func();
         }
         static void test(string[] args)
