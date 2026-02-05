@@ -8,7 +8,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AulaList.AulaPratica();
+            AtvListas.Exercicio();
             //Funcoes.Func();
         }
         static void test(string[] args)
