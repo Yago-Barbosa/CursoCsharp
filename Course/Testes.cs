@@ -8,7 +8,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AulaTimeSpan.Aula();
+            AulaDateTime.AulaFuncoesExtra();
             //Funcoes.Func();
         }
         static void test(string[] args)

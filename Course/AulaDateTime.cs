@@ -7,6 +7,39 @@ namespace Course
 {
     internal class AulaDateTime
     {
+        public static void AulaFuncoesExtra()
+        {
+            DateTime d1 = new DateTime(2000, 10, 15);
+
+            DateTime d2 = new DateTime(2000, 10, 18);
+
+            TimeSpan t1 = d2.Subtract(d1);
+
+            DateTime d3 = d1.AddMinutes(3);
+
+            Console.WriteLine(d1);
+            Console.WriteLine(d2);
+            Console.WriteLine(d3);
+            Console.WriteLine(t1);
+
+            //string s1 = d.ToLongDateString();
+            //string s2 = d.ToLongTimeString();
+            //string s3 = d.ToShortDateString();
+            //string s4 = d.ToShortTimeString();
+
+            //string s5 = d.ToString();
+
+            //string s6 = d.ToString("yyyy-MM-dd HH:mm:ss");
+            //string s7 = d.ToString("yyyy-MM-dd HH:mm:ss.fff");
+
+            //Console.WriteLine(s1);
+            //Console.WriteLine(s2);
+            //Console.WriteLine(s3);
+            //Console.WriteLine(s4);
+            //Console.WriteLine(s5);
+            //Console.WriteLine(s6);
+            //Console.WriteLine(s7);
+        }
         public static void AulaParse()
         {
             DateTime d1 = DateTime.Parse("2000-08-15");
