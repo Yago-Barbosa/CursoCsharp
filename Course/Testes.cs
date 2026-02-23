@@ -8,7 +8,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AtvComposicao.ExResolvido();
+            AtvComposicao2.ExercicioResolvido2();
             //Funcoes.Func();
         }
         static void test(string[] args)
