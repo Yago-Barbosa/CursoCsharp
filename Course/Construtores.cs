@@ -6,7 +6,7 @@ namespace Course
     {
         public static void Encapsulamento()
         {
-            Product p = new Product("TV", 500.00, 10);
+            ProductAula p = new ProductAula("TV", 500.00, 10);
 
             Console.WriteLine(p.Nome);
 
@@ -35,7 +35,7 @@ namespace Course
             //Product p = new Product(nome, preco);
 
             // Possivel com a implementação do construtor Padrao
-            Product p2 = new Product();
+            ProductAula p2 = new ProductAula();
 
             // Sintaxe Alternativa para inicializar Valores,
             // mesmo sem construtores customizados,

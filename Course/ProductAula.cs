@@ -9,7 +9,7 @@ namespace Course
      * Propriedades Customizadas
      * Outros Métodos da Classe 
     */ 
-    class Product
+    class ProductAula
     {
         // Classe do Produto utilizado em outra aula, mas agora com construtores
         // _nome nao pode receber auto properties pois possui uma logica particular
@@ -21,9 +21,9 @@ namespace Course
         // Por convenção os nomes de atributos privados começam com _ e letra minuscula
 
         // Permite o Construtor padrão sem parametros
-        public Product(){}
+        public ProductAula(){}
 
-        public Product(string nome, double preco, int quantidade)
+        public ProductAula(string nome, double preco, int quantidade)
         {
             _nome = nome;
             Preco = preco;
