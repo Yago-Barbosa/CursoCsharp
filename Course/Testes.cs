@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Course.Atividades;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            AtvClient.Exercicio();
+            Aulas.AulaHeranca.TestePratico();
             //Funcoes.Func();
         }
         static void test(string[] args)
