@@ -9,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaUpcasting.UpDown();
+            Aulas.AulaOverride.Override();
             //Funcoes.Func();
         }
         static void test(string[] args)
