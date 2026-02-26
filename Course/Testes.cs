@@ -9,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaHeranca.TestePratico();
+            Aulas.AulaUpcasting.UpDown();
             //Funcoes.Func();
         }
         static void test(string[] args)
