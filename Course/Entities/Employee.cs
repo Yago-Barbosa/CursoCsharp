@@ -7,26 +7,52 @@ namespace Course.Entities
 {
     internal class Employee
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public double Salary {  get; set; }
+        /* Classe utilizada em aulas anteoriores
+        //public int ID { get; set; }
+        //public string Name { get; set; }
+        //public double Salary {  get; set; }
 
-        public Employee () { }
-        public Employee(int Id, string name, double salary)
+        //public Employee () { }
+        //public Employee(int Id, string name, double salary)
+        //{
+        //    ID = Id;
+        //    Name = name;
+        //    Salary = salary;
+        //}
+
+        //public void IncreaseSalary(double percentage)
+        //{
+        //    Salary += Salary * (percentage / 100.0);
+        //}
+
+        //public override string ToString()
+        //{
+        //    return ID + ", " + Name + ", R$" + Salary.ToString("F2", CultureInfo.InvariantCulture);
+        }*/
+
+        // Classe para exercicio resolvido
+
+        public string? Name { get; set; }
+        public int Hours { get; set; }
+        public double ValuePerHour { get; set; }
+
+        public Employee() { }
+
+        public Employee(string name, int hours, double valuePerHour)
         {
-            ID = Id;
             Name = name;
-            Salary = salary;
+            Hours = hours;
+            ValuePerHour = valuePerHour;
         }
 
-        public void IncreaseSalary(double percentage)
+        public virtual double Payment()
         {
-            Salary += Salary * (percentage / 100.0);
+            return Hours * ValuePerHour;
         }
 
         public override string ToString()
         {
-            return ID + ", " + Name + ", R$" + Salary.ToString("F2", CultureInfo.InvariantCulture);
+            return Name + " - $ " + Payment().ToString("f2",CultureInfo.InvariantCulture);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace Course.Entities
 {
-    internal class SavingsAccount : Account
+    // Sealed indica que a classe não pode ser herdada
+    sealed internal class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -23,7 +24,9 @@
         //}
 
         // Utiliza a base do método de saque da conta comum e retira mais 2 reais (deixando a taxa em 7 reais para poupança)
-        public override void Withdraw(double amount)
+
+        // Sealed também indica que um método sobreposto não poderá ser sobreposto de novo em uma outra subclasse
+        public sealed override void Withdraw(double amount)
         {
             // Utilizar o prefixo base para indicar a execução do método base (saque)
             // Também já utilizamos o base em contrutores...

@@ -9,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaOverride.Override();
+            Atividades.AtvResolvidaEmployee.Exercicio();
             //Funcoes.Func();
         }
         static void test(string[] args)
