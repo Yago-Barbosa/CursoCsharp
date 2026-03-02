@@ -9,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Atividades.AtvResolvidaEmployee.Exercicio();
+            Atividades.AtvProdutos.Exercicio();
             //Funcoes.Func();
         }
         static void test(string[] args)

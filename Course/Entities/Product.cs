@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Globalization;
 
 namespace Course.Entities
 {
     internal class Product
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public double Price { get; set; }
 
         public Product()
@@ -18,6 +19,10 @@ namespace Course.Entities
         {
             Name = name;
             Price = price;
+        }
+
+        public virtual string PriceTag() {
+            return Name + " $ " + Price.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
