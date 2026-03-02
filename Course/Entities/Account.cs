@@ -1,6 +1,7 @@
 ﻿namespace Course.Entities
 {
-    internal class Account
+    // Conta se tornará uma classe abstrata para a aula 117
+    internal  abstract class Account
     {
         public int Number { get; private set; }
         public string? Holder { get; private set; }
