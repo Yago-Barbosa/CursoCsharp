@@ -9,10 +9,10 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaClasseAbstrata.ClassesAbstratas();
+            Aulas.AulaMetodoAbstrato.ExercicioResolvido();
             //Funcoes.Func();
         }
-        static void test(string[] args)
+        public static void EquacaoSegundoGrau(string[] args)
         {
             double a = 1.0, b = -3.0 ,c = -4.0;
 
