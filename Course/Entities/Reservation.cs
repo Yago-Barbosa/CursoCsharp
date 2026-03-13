@@ -23,10 +23,24 @@ namespace Course.Entities
             return (int)duration.TotalDays;
         }
 
-        public void UpdateDates(DateTime checkIn, DateTime checkOut)
+        // Essa solução ainda não é a melhor...
+        // Pois atualizar uma reserva não deveria retornar um string e a lógica ainda está bagunçada...
+        public string UpdateDates(DateTime checkIn, DateTime checkOut)
         {
+            DateTime now = DateTime.Now;
+            if (checkIn < now || checkOut < now)
+            {
+                return "Reservation date for update must be future dates";
+            }
+            if (checkOut <= checkIn)
+            {
+                return "Check-Out date must be after check-in date";
+            }
+            
             CheckIn = checkIn;
             CheckOut = checkOut;
+            // Para indicar que a função ocorreu sem nenhum erro
+            return null;
         }
 
         public override string ToString()

@@ -11,11 +11,11 @@ namespace Course.Aulas
         {
             // Versão sem usar exceções personalizadas - Solução "Ruim"
             Console.Write("Room Number: ");
-            int roomNumber = int.Parse(Console.ReadLine());
+            int roomNumber = int.Parse(Console.ReadLine()!);
             Console.Write("Check-in date (dd/MM/yyyy): ");
-            DateTime checkIn = DateTime.Parse(Console.ReadLine());
+            DateTime checkIn = DateTime.Parse(Console.ReadLine()!);
             Console.Write("Check-out date (dd/MM/yyyy): ");
-            DateTime checkOut = DateTime.Parse(Console.ReadLine());
+            DateTime checkOut = DateTime.Parse(Console.ReadLine()!);
 
             // Solução Ruim pois toda a lógica da reserva está no cógido principal
             if(checkIn >= checkOut)
@@ -30,20 +30,18 @@ namespace Course.Aulas
                 Console.WriteLine();
                 Console.WriteLine("Enter data to update the reservation");
                 Console.Write("Check-in date (dd/MM/yyyy): ");
-                checkIn = DateTime.Parse(Console.ReadLine());
+                checkIn = DateTime.Parse(Console.ReadLine()!);
                 Console.Write("Check-out date (dd/MM/yyyy): ");
-                checkOut = DateTime.Parse(Console.ReadLine());
+                checkOut = DateTime.Parse(Console.ReadLine()!);
 
-                DateTime now = DateTime.Now;
-                if (checkIn < now || checkOut < now)
+                string error = reservation.UpdateDates(checkIn, checkOut);
+
+                if(error != null)
                 {
-                    Console.WriteLine("Error in reservation: Reservation date for update must be future dates");
-                } else if (checkOut <= checkIn)
+                    Console.WriteLine("Error in reservation: " + error);
+                }
+                else
                 {
-                    Console.WriteLine("Error in reservation: Check-Out date must be after check-in date");
-                } else
-                {
-                    reservation.UpdateDates(checkIn, checkOut);
                     Console.WriteLine("Reservation: " + reservation);
                 }
             }
