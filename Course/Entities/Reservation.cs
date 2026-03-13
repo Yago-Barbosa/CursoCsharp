@@ -1,4 +1,5 @@
 ﻿using System;
+using Course.Entities.Exceptions;
 
 namespace Course.Entities
 {
@@ -10,8 +11,14 @@ namespace Course.Entities
 
         public Reservation(){ }
 
+        // Agora com a criação da DomainException é possivel adiciona-lá no construtor
         public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
         {
+            if (checkOut <= checkIn)
+            {
+                throw new DomainException("Check-Out date must be after check-in date");
+            }
+
             RoomNumber = roomNumber;
             CheckIn = checkIn;
             CheckOut = checkOut;
@@ -23,24 +30,21 @@ namespace Course.Entities
             return (int)duration.TotalDays;
         }
 
-        // Essa solução ainda não é a melhor...
-        // Pois atualizar uma reserva não deveria retornar um string e a lógica ainda está bagunçada...
-        public string UpdateDates(DateTime checkIn, DateTime checkOut)
+        public void UpdateDates(DateTime checkIn, DateTime checkOut)
         {
             DateTime now = DateTime.Now;
             if (checkIn < now || checkOut < now)
             {
-                return "Reservation date for update must be future dates";
+                // se houver algum erro, será lancçada uma nova exceção personalizada e o método será "cortado"
+                throw new DomainException("Reservation date for update must be future dates");
             }
             if (checkOut <= checkIn)
             {
-                return "Check-Out date must be after check-in date";
+                throw new DomainException("Check-Out date must be after check-in date");
             }
             
             CheckIn = checkIn;
             CheckOut = checkOut;
-            // Para indicar que a função ocorreu sem nenhum erro
-            return null;
         }
 
         public override string ToString()
