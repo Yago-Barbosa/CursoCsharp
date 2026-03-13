@@ -9,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaTryCatch.ExPratico();
+            Aulas.AulaExcecaoPersonalizada.Exercicio();
             //Funcoes.Func();
         }
         public static void EquacaoSegundoGrau(string[] args)
