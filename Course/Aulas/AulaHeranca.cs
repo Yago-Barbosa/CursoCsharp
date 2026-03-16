@@ -9,7 +9,7 @@ namespace Course.Aulas
     {
         public static void TestePratico()
         {
-            BusinessAccount account = new BusinessAccount(8010, "Bob Brown", 100.0, 500.0);
+            BusinessAccount account = new BusinessAccount(8010, "Bob Brown", 100.0, 500.0, 0.0);
 
             Console.WriteLine(account.Balance);
 

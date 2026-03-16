@@ -7,7 +7,7 @@
         public BusinessAccount() { }
 
         // Usar o base para acionar o construtor da superclasse (classe base) na subclasse(classe atual)
-        public BusinessAccount(int number, string holder, double balance, double loanLimit) : base(number, holder, balance) 
+        public BusinessAccount(int number, string holder, double balance, double loanLimit, double withdrawLimit) : base(number, holder, balance, withdrawLimit) 
         {
             LoanLimit = loanLimit;
         }

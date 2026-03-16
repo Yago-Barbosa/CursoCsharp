@@ -10,7 +10,7 @@ namespace Course.Aulas
         public static void Override()
         {
             // Account acc1 = new Account(1001, "Alex", 500.0);
-            Account acc2 = new SavingsAccount(1002, "Anna", 500.0, 0.01);
+            Account acc2 = new SavingsAccount(1002, "Anna", 500.0, 0.01, 0.0);
 
             // acc1.Withdraw(10);
             acc2.Withdraw(10);
