@@ -9,7 +9,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Atividades.AtvContaBancaria.Exercicio();
+            JogoDeAdivinhacao.Adivinhe.Jogo();
             //Funcoes.Func();
         }
         public static void EquacaoSegundoGrau(string[] args)
