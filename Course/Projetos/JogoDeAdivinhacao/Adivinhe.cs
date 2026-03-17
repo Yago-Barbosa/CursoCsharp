@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Course.JogoDeAdivinhacao
+namespace Course.Projetos.JogoDeAdivinhacao
 {
     internal class Adivinhe
     {
@@ -12,35 +12,40 @@ namespace Course.JogoDeAdivinhacao
 
             Random random = new Random();
             int numSecreto = random.Next(0, 11);
-            bool ganhou = false;
+            int tentativas = 5;
             Console.WriteLine("============ Jogo de Adivinhação ============");
             Console.WriteLine();
             Console.WriteLine("Tente Adivinhar o número escolhido (0 - 10)");
 
-            for(int i = 1; i <= 5; i++)
+            for (int i = 1; i <= tentativas; i++)
             {
                 Console.Write($"{i}# Tentativa: ");
                 int numEscolhido = int.Parse(Console.ReadLine()!);
-                if(numEscolhido == numSecreto)
+                if (numEscolhido == numSecreto)
                 {
                     Console.WriteLine("Parábens, você acertou o número secreto!!!");
-                    i = 5;
-                    ganhou = true;
-                } else if (numEscolhido > numSecreto)
+                    return;
+                }
+                else if (numEscolhido > numSecreto && numEscolhido <= 10)
                 {
                     Console.WriteLine("O número secreto é menor...");
-                } else if (numEscolhido < numSecreto)
+                }
+                else if (numEscolhido < numSecreto && numEscolhido <= 10)
                 {
                     Console.WriteLine("O número secreto é maior...");
-                } else
+                }
+                else
                 {
+                    // caso ele escolha um número maior que dez suas tentativas não se esgostarão
                     Console.WriteLine("O número secreto está entre 0 e 10...");
+                    i--;
                 }
 
                 Console.WriteLine();
             }
-            if (ganhou == false)
-                Console.WriteLine("Que pena, não foi dessa vez...");
+            Console.WriteLine("Que pena, não foi dessa vez...");
+            Console.WriteLine();
+            Console.WriteLine($"O número secreto era {numSecreto}");
         }
     }
 }

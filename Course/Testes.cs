@@ -1,4 +1,7 @@
 ﻿using Course.Atividades;
+using Course.Entities;
+using Course.Projetos.JogoDeAdivinhacao;
+using Course.Projetos.ProjetoCalculadora;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +12,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            JogoDeAdivinhacao.Adivinhe.Jogo();
+            Projetos.ProjetoCalculadora.Calculadora.Calc();
+            //Adivinhe.Jogo();
             //Funcoes.Func();
         }
         public static void EquacaoSegundoGrau(string[] args)
