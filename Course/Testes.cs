@@ -12,7 +12,8 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Projetos.ProjetoCalculadora.Calculadora.Calc();
+            Aulas.AulaFiles.Pratica();
+            //Projetos.ProjetoCalculadora.Calculadora.Calc();
             //Adivinhe.Jogo();
             //Funcoes.Func();
         }
