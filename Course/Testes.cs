@@ -12,7 +12,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaDirectorys.Pratica();
+            Aulas.AulaPath.Exemplo();
             //Projetos.ProjetoCalculadora.Calculadora.Calc();
             //Adivinhe.Jogo();
             //Funcoes.Func();
