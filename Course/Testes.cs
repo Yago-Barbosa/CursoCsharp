@@ -12,7 +12,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Aulas.AulaFiles.BlockUsing();
+            Aulas.AulaFiles.StreamWriter();
             //Projetos.ProjetoCalculadora.Calculadora.Calc();
             //Adivinhe.Jogo();
             //Funcoes.Func();

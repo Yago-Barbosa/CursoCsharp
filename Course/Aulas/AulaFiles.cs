@@ -7,6 +7,30 @@ namespace Course.Aulas
 {
     internal class AulaFiles
     {
+        public static void StreamWriter()
+        {
+            string sourcePath = @"c:\temp\file1.txt";
+            string targetPath = @"c:\temp\file2.txt";
+
+            // Exemplo : Ler o file1 e transformar tudo em maiusculo em um file 2
+            try {
+                string[] lines = File.ReadAllLines(sourcePath);
+
+                // Append = Concatena(adiciona) no final do arquivo
+                using (StreamWriter sw = File.AppendText(targetPath))
+                {
+                    foreach (string line in lines) {
+                        sw.WriteLine(line.ToUpper());
+                    }
+
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred!");
+                Console.WriteLine(e.Message);
+            }
+        }
         public static void BlockUsing()
         {
 
