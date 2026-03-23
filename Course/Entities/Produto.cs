@@ -10,10 +10,11 @@ namespace Course.Entities
 
         public Produto() { }
 
-        public Produto(string nome, double preco)
+        public Produto(string nome, double preco, int quantidade)
         {
             Nome = nome;
             Preco = preco;
+            Quantidade = quantidade;
         }
         public double ValorTotal()
         {
