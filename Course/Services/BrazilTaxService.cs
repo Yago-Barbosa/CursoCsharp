@@ -1,8 +1,8 @@
 ﻿namespace Course.Services
 {
-    internal class BrazilTaxService
+    // Não é uma herança e sim uma realização de interface
+    internal class BrazilTaxService : ITaxService
     {
-
         public double Tax(double amount)
         {
             if (amount < 100)
