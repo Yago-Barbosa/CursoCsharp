@@ -12,7 +12,7 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Atividades.AtvInstallments.Exercicio();
+            Aulas.AulaAbstractAndInterface.Aula();
             //Projetos.ProjetoCalculadora.Calculadora.Calc();
             //Adivinhe.Jogo();
             //Funcoes.Func();

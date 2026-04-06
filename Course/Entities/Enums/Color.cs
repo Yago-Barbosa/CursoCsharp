@@ -6,8 +6,6 @@ namespace Course.Entities.Enums
 {
     internal enum Color
     {
-        Black,
-        Blue,
-        Red
+        Black, White
     }
 }

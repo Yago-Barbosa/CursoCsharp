@@ -19,7 +19,7 @@ namespace Course.Atividades
             Console.Write("Contract Value: ");
             double totalValue = double.Parse(Console.ReadLine()!, CultureInfo.InvariantCulture);
             Console.Write("Enter number of installments: ");
-            int months = int.Parse(Console.ReadLine());
+            int months = int.Parse(Console.ReadLine()!);
 
             Contract contract = new Contract(number, date, totalValue);
 

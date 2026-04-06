@@ -1,22 +1,31 @@
-﻿using System;
+﻿using Course.Entities.Enums;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
-using Course.Entities.Enums;
 
 namespace Course.Entities
 {
-    internal class Rectangle : Shape
+    internal class Rectangle : AbstractShape
     {
         public double Width { get; set; }
         public double Height { get; set; }
 
-        public Rectangle(double width, double height, Color color) : base(color){
-            Width = width; Height = height;
-        }
-
         public override double Area()
         {
             return Width * Height;
+        }
+
+        public override string ToString()
+        {
+            return "Rectangle Color = " +
+                    Color +
+                    ", Width = " +
+                    Width.ToString("F2", CultureInfo.InvariantCulture) +
+                    ", Height = " +
+                    Height.ToString("F2", CultureInfo.InvariantCulture) +
+                    ", Area = " +
+                    Area().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
