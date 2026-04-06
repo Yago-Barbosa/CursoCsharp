@@ -6,6 +6,7 @@ namespace Course.Services
 {
     internal interface IPaymentService
     {
-        double Payment(double amount);
+        double PaymentFee(double amount);
+        double Interest(double amount, int months);
     }
 }

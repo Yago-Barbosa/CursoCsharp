@@ -13,14 +13,16 @@ namespace Course.Services
             _paymentService = paymentService;
         }
 
-        public void ProcessInstallment(Contract contract)
-        { 
-            double basicPayment = 0.0;
-            DateOnly dueDate = contract.Date;
-
-
-            double payment = _paymentService.Payment(basicPayment);
-            contract.installments = new Installment(dueDate, payment);
+        public void ProcessContract(Contract contract, int months)
+        {
+            double basicQuota = contract.TotalValue / months;
+            for (int i = 1; i <= months; i++)
+            {
+                DateTime date = contract.Date.AddMonths(i);
+                double updatedQuota = basicQuota + _paymentService.Interest(basicQuota, i);
+                double fullQuota = updatedQuota + _paymentService.PaymentFee(updatedQuota);
+                contract.AddInstallment(new Installment(date, fullQuota));
+            }
         }
     }
 }
